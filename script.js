@@ -22,6 +22,14 @@ $("document").ready(() => {
             $('#hideShowArrow').attr("src", "./images/upArrow.svg");
         }
     })
+
+    //on color click prompt rgb copy
+    $('.color').click(e => {
+        const color = e.target.style.backgroundColor;
+        const splitColor = color.replace(/\D/g, ' ').trim().split(' ');
+        prompt("Copy to clipboard: Ctrl+C, Enter \n RGB:", `${splitColor[0]} ${splitColor[2]} ${splitColor[4]}`);
+    });
+
     //change test text on input changes
     //change text
     $("#text1").change(e => {
