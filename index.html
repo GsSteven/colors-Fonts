@@ -6,16 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Merriweather&family=Montserrat&family=PT+Sans&family=PT+Sans+Narrow&family=Fjalla+One&family=Noto+Sans&family=Alegreya&family=Lato&family=Playfair+Display&family=Source+Sans+Pro&family=Oswald&family=Open+Sans&family=Raleway&family=Roboto+Slab&family=Roboto&family=Roboto+Condensed&family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Anton&family=Signika&family=Neuton&family=Work+Sans&family=Rubik&family=Karla&family=Eczar&&family=Frank+Ruhl+Libre&family=Alfa+Slab+One&family=Gentium+Book+Basic&family=Goudy+Bookletter+1911&family=Average+Sans&family=Dosis&family=Titillium+Web&family=Rufina&family=PT+Serif&family=Overpass&family=Permanent+Marker&family=Ruda&family=Oxygen:wght@300&family=Noto+Serif&family=Abril+Fatface&family=Poppins:wght@300&family=Merriweather&family=Montserrat&family=PT+Sans&family=PT+Sans+Narrow&family=Fjalla+One&family=Noto+Sans&family=Alegreya&family=Lato&family=Playfair+Display&family=Source+Sans+Pro&family=Oswald&family=Open+Sans&family=Raleway&family=Roboto+Slab&family=Roboto&family=Roboto+Condensed&family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
     <link href='./style.css' rel="stylesheet" type="text/css" />
+    <link rel='icon' type="image/png" sizes="64x64" href='./images/colorIcon.png' >
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/colorLogo180.png" >
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Colors and Fonts</title>
 </head>
 <body>
+    <nav>
+        <a class="navLink" href="#colorsStart">Colors</a>
+        <a class="navLink" href="#fontsStart">Fonts</a>
+    </nav>
     <button id="lightDarkMode" title="Dark Mode">
         <img src="./images/moon.svg" alt="Dark Mode" id="lightDarkImg" />
     </button>
-    <h1>Colors</h1>
+    <h1 id="colorsStart">Colors</h1>
 
     <h2>80's Summer</h2>
     <div class="palette">
@@ -133,7 +139,7 @@
             <div class="color" style="background-color: #C6D0AE"></div>
             <div class="color" style="background-color: #95CCC7"></div>
         </div>
-    <h1>Fonts</h1>
+    <h1 id="fontsStart">Fonts</h1>
     <div class="fontNav">
         <div class="fontHeadContainer">
             <label for="text1">Head</label>
@@ -219,6 +225,90 @@
         <p class="fontName"><span style="font-family: 'Merriweather'">Merriweather</span> & <span style="font-family: 'Montserrat'">Montserrat</span></p>
         <h1 class="font1" style="font-family: 'Merriweather'">Head Text</h1>
         <p class="font2" style="font-family: 'Montserrat'">Sub Text</p>
+    </div>
+
+    <div class="fontGroup">
+        <p class="fontName"><span style="font-family: 'Abril Fatface'">Abril Fatface</span> & <span style="font-family: 'Poppins'">Poppins Light</span></p>
+        <h1 class="font1" style="font-family: 'Abril Fatface'">Head Text</h1>
+        <p class="font2" style="font-family: 'Poppins'">Sub Text</p>
+    </div>
+
+    <div class="fontGroup">
+        <p class="fontName"><span style="font-family: 'Ruda'">Ruda</span> & <span style="font-family: 'Roboto Slab'">Roboto Slab</span></p>
+        <h1 class="font1" style="font-family: 'Ruda'">Head Text</h1>
+        <p class="font2" style="font-family: 'Roboto Slab'">Sub Text</p>
+    </div>
+
+    <div class="fontGroup">
+        <p class="fontName"><span style="font-family: 'Oxygen'">Oxygen Light</span> & <span style="font-family: 'Noto Serif'">Noto Serif</span></p>
+        <h1 class="font1" style="font-family: 'Oxygen'">Head Text</h1>
+        <p class="font2" style="font-family: 'Noto Serif'">Sub Text</p>
+    </div>
+
+    <div class="fontGroup">
+        <p class="fontName"><span style="font-family: 'Permanent Marker'">Permanent Marker</span> & <span style="font-family: 'Overpass'">Overpass</span></p>
+        <h1 class="font1" style="font-family: 'Permanent Marker'">Head Text</h1>
+        <p class="font2" style="font-family: 'Overpass'">Sub Text</p>
+    </div>
+
+    <div class="fontGroup">
+        <p class="fontName"><span style="font-family: 'Slabo'">Slabo</span> & <span style="font-family: 'Lato'">Lato</span></p>
+        <h1 class="font1" style="font-family: 'Slabo'">Head Text</h1>
+        <p class="font2" style="font-family: 'Lato'">Sub Text</p>
+    </div>
+
+    <div class="fontGroup">
+        <p class="fontName"><span style="font-family: 'Rufina'">Rufina Bold</span> & <span style="font-family: 'PT Serif'">PT Serif</span></p>
+        <h1 class="font1" style="font-family: 'Rufina'; font-weight: 800;">Head Text</h1>
+        <p class="font2" style="font-family: 'PT Serif'">Sub Text</p>
+    </div>
+
+    <div class="fontGroup">
+        <p class="fontName"><span style="font-family: 'Dosis'">Dosis</span> & <span style="font-family: 'Titillium Web'">Titillium Web</span></p>
+        <h1 class="font1" style="font-family: 'Dosis'">Head Text</h1>
+        <p class="font2" style="font-family: 'Titillium Web'">Sub Text</p>
+    </div>
+
+    <div class="fontGroup">
+        <p class="fontName"><span style="font-family: 'Goudy Bookletter 1911'">Goudy Bookletter 1911</span> & <span style="font-family: 'Average Sans'">Average Sans</span></p>
+        <h1 class="font1" style="font-family: 'Goudy Bookletter 1911'">Head Text</h1>
+        <p class="font2" style="font-family: 'Average Sans'">Sub Text</p>
+    </div>
+
+    <div class="fontGroup">
+        <p class="fontName"><span style="font-family: 'Alfa Slab One'">Alfa Slab One</span> & <span style="font-family: 'Gentium Book Basic'">Gentium Book Basic</span></p>
+        <h1 class="font1" style="font-family: 'Alfa Slab One'">Head Text</h1>
+        <p class="font2" style="font-family: 'Gentium Book Basic'">Sub Text</p>
+    </div>
+
+    <div class="fontGroup">
+        <p class="fontName"><span style="font-family: 'Raleway'">Raleway Light</span> & <span style="font-family: 'Frank Ruhl Libre'">Frank Ruhl Libre</span></p>
+        <h1 class="font1" style="font-family: 'Raleway'; font-weight: 300;">Head Text</h1>
+        <p class="font2" style="font-family: 'Frank Ruhl Libre'">Sub Text</p>
+    </div>
+
+    <div class="fontGroup">
+        <p class="fontName"><span style="font-family: 'Eczar'">Eczar Semibold</span> & <span style="font-family: 'Merriweather'">Merriweather</span></p>
+        <h1 class="font1" style="font-family: 'Eczar'; font-weight: 600;">Head Text</h1>
+        <p class="font2" style="font-family: 'Merriweather'">Sub Text</p>
+    </div>
+
+    <div class="fontGroup">
+        <p class="fontName"><span style="font-family: 'Rubik'">Rubik</span> & <span style="font-family: 'Karla'">Karla</span></p>
+        <h1 class="font1" style="font-family: 'Rubik'">Head Text</h1>
+        <p class="font2" style="font-family: 'Karla'">Sub Text</p>
+    </div>
+
+    <div class="fontGroup">
+        <p class="fontName"><span style="font-family: 'Neuton'">Neuton</span> & <span style="font-family: 'Work Sans'">Work Sans</span></p>
+        <h1 class="font1" style="font-family: 'Neuton'">Head Text</h1>
+        <p class="font2" style="font-family: 'Work Sans'">Sub Text</p>
+    </div>
+
+    <div class="fontGroup">
+        <p class="fontName"><span style="font-family: 'Anton'">Anton</span> & <span style="font-family: 'Signika'">Signika Light</span></p>
+        <h1 class="font1" style="font-family: 'Anton'">Head Text</h1>
+        <p class="font2" style="font-family: 'Signika'; font-weight: 300;">Sub Text</p>
     </div>
     <script src="script.js"></script>
 </body>

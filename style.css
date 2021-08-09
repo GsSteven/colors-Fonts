@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +11,30 @@
 body {
     padding: 30px 0;
     background-color: white;
-    transition: all 0.3 ease-in-out;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    padding: 10px 0;
+    border-bottom-right-radius: 5px;
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 5;
+    background-color: white;
+}
+
+.navLink {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+}
+
+.navLink:hover {
+    color: #058789;
 }
 
 #lightDarkMode {
@@ -52,7 +79,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px 0 40px 0;
+    padding: 40px 0;
     position: sticky;
     top: 0;
     background-color: white;

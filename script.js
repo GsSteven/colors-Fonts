@@ -3,6 +3,8 @@ $("document").ready(() => {
     //toggle light and dark mode
     $("#lightDarkMode").click(() => {
         if ($("body").css("backgroundColor") !== "rgb(0, 0, 0)") {
+            $('nav').css("background-color", 'rgb(0, 0, 0)');
+            $('.navLink').css('color', 'rgb(255, 255, 255)');
             $("#lightDarkImg").attr("src", './images/sun.svg');
             $("#lightDarkMode").attr("title", "Light Mode");
             $('body').css({ "backgroundColor": "rgb(0, 0, 0)", "color": "rgb(255, 255, 255)" });
@@ -10,6 +12,8 @@ $("document").ready(() => {
             $('.fontName').css("borderBottom", '1px solid white');
             $('#hideShowArrow').attr("src", "./images/upArrowWhite.svg");
         } else {
+            $('nav').css("background-color", 'rgb(255, 255, 255)');
+            $('.navLink').css('color', 'rgb(0, 0, 0)');
             $("#lightDarkImg").attr("src", './images/moon.svg');
             $("#lightDarkMode").attr("title", "Dark Mode");
             $('body').css({ "backgroundColor": "rgb(255, 255, 255)", "color": "rgb(0, 0, 0)" });
