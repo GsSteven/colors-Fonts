@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 30px 0;
+    background-color: white;
+    transition: all 0.3 ease-in-out;
+}
+
+#lightDarkMode {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 5;
+}
+
+#lightDarkMode img {
+    pointer-events: none;
+}
+
+h1 {
+    width: 200px;
+    text-align: center;
+    border-bottom: 1px solid black ;
+    margin: 30px auto 0 auto;
+}
+h2 {
+    text-align: center;
+    margin-top: 30px;
+}
+.palette {
+    width: 100%;
+    max-width: 1000px;
+    height: 75px;
+    display: flex;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.color {
+    height: 100%;
+    width: 20%;
+}
+
+.fontNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 40px 0;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.fontNav div {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.fontNav label {
+    margin-top: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.fontNav input {
+    max-width: 150px;
+}
+
+#hideShowFontNav {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+#hideShowFontNav img {
+    pointer-events: none;
+    transition: .3s ease-in-out;
+}
+
+.flip {
+    transform: rotate(180deg);
+}
+
+.fontGroup {
+    padding: 50px 0 80px 0;
+}
+
+.fontName {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    min-width: 300px;
+    border-bottom: 1px solid black;
+    margin: 0 auto;
+}
+
+.font1, .font2 {
+    width: 100%;
+    text-align: center;
+    border: none;
+}
