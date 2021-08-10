@@ -19,6 +19,7 @@ nav {
     padding: 10px 0;
     border-bottom-right-radius: 5px;
     width: 33%;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -63,24 +64,43 @@ h2 {
     margin-top: 30px;
 }
 .palette {
-    width: 100%;
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     max-width: 1000px;
-    height: 75px;
+    height: 35px;
     display: flex;
     margin: 0 auto;
-    padding: 20px;
+    z-index: 5;
+}
+
+.grabPalette {
+    margin-left: 5px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.topOfPage {
+    position: fixed;
+    top: 0;
+    left: 33%;
+    width: 40%;
 }
 
 .color {
     min-width: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .fontNav {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     padding: 40px 0;
     position: sticky;
     top: 0;
@@ -90,7 +110,11 @@ h2 {
 .fontNav div {
     display: flex;
     flex-direction: column;
-    margin: 0 20px;
+    margin: 0 10px;
+}
+
+.fontNav div input[type=color] {
+    margin: 0 auto;
 }
 
 .fontNav label {
@@ -122,8 +146,63 @@ h2 {
     transform: rotate(180deg);
 }
 
+.backgroundUpload {
+    text-align: center;
+}
+
+.backgroundUpload #backgroundColorPick {
+    margin: 0 auto;
+    display: block;
+}
+
+.backgroundUpload label[for=imageUpload],
+.backgroundUpload #clearImage {
+    border: 1px solid black;
+    display: block;
+    width: 120px;
+    padding: 5px;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+    background-color: transparent
+}
+
+.backgroundUpload #clearImage {
+    display: none;
+}
+
+.backgroundUpload #imageUpload {
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.backgroundUpload h3 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.backgroundRadioButtons {
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.radioContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+}
+
 .fontGroup {
     padding: 50px 0 80px 0;
+    width: 50%;
+    min-width: 350px;
+    margin: 0 auto;
 }
 
 .fontName {
@@ -137,8 +216,26 @@ h2 {
     margin: 0 auto;
 }
 
+.selectedFonts {
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .font1, .font2 {
     width: 100%;
     text-align: center;
     border: none;
+}
+
+@media screen and (max-width: 800px) {
+    .topOfPage {
+        font-size: 10px;
+        font-weight: bold;
+    }
 }

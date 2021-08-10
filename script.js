@@ -1,5 +1,6 @@
 
 $("document").ready(() => {
+
     //toggle light and dark mode
     $("#lightDarkMode").click(() => {
         if ($("body").css("backgroundColor") !== "rgb(0, 0, 0)") {
@@ -7,6 +8,7 @@ $("document").ready(() => {
             $('.navLink').css('color', 'rgb(255, 255, 255)');
             $("#lightDarkImg").attr("src", './images/sun.svg');
             $("#lightDarkMode").attr("title", "Light Mode");
+            $(".grabPalette").children('img').attr("src", "./images/pinWhite.svg");
             $('body').css({ "backgroundColor": "rgb(0, 0, 0)", "color": "rgb(255, 255, 255)" });
             $('.fontNav').css("backgroundColor", "rgb(0, 0, 0)");
             $('.fontName').css("borderBottom", '1px solid white');
@@ -16,6 +18,7 @@ $("document").ready(() => {
             $('.navLink').css('color', 'rgb(0, 0, 0)');
             $("#lightDarkImg").attr("src", './images/moon.svg');
             $("#lightDarkMode").attr("title", "Dark Mode");
+            $(".grabPalette").children('img').attr("src", "./images/pin.svg");
             $('body').css({ "backgroundColor": "rgb(255, 255, 255)", "color": "rgb(0, 0, 0)" });
             $('.fontNav').css("backgroundColor", "rgb(255, 255, 255)");
             $('.fontName').css("borderBottom", '1px solid black');
@@ -23,11 +26,39 @@ $("document").ready(() => {
         }
     })
 
-    //on color click prompt rgb copy
-    $('.color').click(e => {
-        const color = e.target.style.backgroundColor;
+    //on color click show rgb
+    $('.color').click(function () {
+        const color = $(this).css("backgroundColor");
         const splitColor = color.replace(/\D/g, ' ').trim().split(' ');
-        prompt("Copy to clipboard: Ctrl+C, Enter \n RGB:", `${splitColor[0]} ${splitColor[2]} ${splitColor[4]}`);
+        const simpleRGB = `${splitColor[0]} ${splitColor[2]} ${splitColor[4]}`;
+        //show or hide rgb value
+        if (!$(this).html()) {
+            $(this).html(simpleRGB);
+        } else {
+            $(this).html('');
+        }
+
+        function isDark(color) {
+            var match = /rgb\((\d+).*?(\d+).*?(\d+)\)/.exec(color);
+            return parseFloat(match[1])
+                + parseFloat(match[2])
+                + parseFloat(match[3])
+                < 3 * 256 / 2; // r+g+b should be less than half of max (3 * 256)
+        }
+        //if color is dark make rgb text white
+        if (isDark(color)) {
+            $(this).css("color", "white");
+        }
+    });
+
+    //set chosen pallete to top of page
+    $('.grabPalette').click(function () {
+        if ($("body").css("backgroundColor") !== "rgb(0, 0, 0)") {
+            $(this).children('img').attr("src", './images/pin.svg');
+        } else {
+            $(this).children('img').attr("src", './images/pinWhite.svg');
+        }
+        $(this).parent().toggleClass("topOfPage");
     });
 
     //change test text on input changes
@@ -51,26 +82,14 @@ $("document").ready(() => {
         $(".font2").css("fontSize", `${value}px`);
     });
 
-    //change font color with Hex Code
-    $("#text1ColorHex").change(e => {
+    //change font color
+    $("#text1Color").change(e => {
         const value = e.target.value;
-        $(".font1").css("color", `#${value}`);
+        $(".font1").css("color", value);
     });
-    $("#text2ColorHex").change(e => {
+    $("#text2Color").change(e => {
         const value = e.target.value;
-        $(".font2").css("color", `#${value}`);
-    });
-
-    //change font color with RGBA
-    $("#text1ColorRGBA").change(e => {
-        const value = e.target.value.split(' ');
-        const opacity = value[3] ? value[3] : 1;
-        $(".font1").css("color", `rgba(${value[0]}, ${value[1]}, ${value[2]}, ${opacity})`);
-    });
-    $("#text2ColorRGBA").change(e => {
-        const value = e.target.value.split(' ');
-        const opacity = value[3] ? value[3] : 1;
-        $(".font2").css("color", `rgba(${value[0]}, ${value[1]}, ${value[2]}, ${opacity})`);
+        $(".font2").css("color", value);
     });
 
     //toggle font Nav
@@ -78,5 +97,31 @@ $("document").ready(() => {
         $('.fontHeadContainer').slideToggle();
         $('.fontSubContainer').slideToggle();
         $('#hideShowArrow').toggleClass('flip');
-    })
+    });
+
+    //handle background color change
+    $("#backgroundColorPick").change(e => {
+        const value = e.target.value;
+        $(".selectedFonts").css("backgroundColor", value);
+    });
+
+    //handle image 'uploading'
+    $("#imageUpload").change(e => {
+        const image = e.target.files[0];
+        const tempURL = URL.createObjectURL(image);
+        $(".selectedFonts").css("backgroundImage", `url(${tempURL})`);
+        $("#clearImage").css("display", "block");
+    });
+
+    //handle clearing background image
+    $("#clearImage").click(function () {
+        $(".selectedFonts").css("backgroundImage", ``);
+        $(this).css("display", "none");
+    });
+
+    //handle background image position change
+    $(".backgroundRadioButtons").change(e => {
+        const value = e.target.value;
+        $(".selectedFonts").css("backgroundPosition", value);
+    });
 })
