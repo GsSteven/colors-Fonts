@@ -364,33 +364,42 @@
         <label for="text2Color">Sub Color</label>
         <input type="color" id="text2Color" name="text2Color" />
       </div>
+      <div class="backgroundUpload">
+        <label for="backgroundColorPick">Background Color</label>
+        <input type="color" id="backgroundColorPick" />
+        <p>or</p>
+        <label for="imageUpload">Upload Image</label>
+        <input id="imageUpload" type="file" accept=".jpg, .png, .gif" />
+        <button id="clearImage">Remove Image</button>
+        <h3 id="imagePositionHead">Image Position</h3>
+        <div class="backgroundRadioButtons">
+          <div class="radioContainer">
+            <label for="top">Top</label>
+            <input type="radio" id="top" name="imagePosition" value="top" />
+          </div>
+          <div class="radioContainer">
+            <label for="center">Center</label>
+            <input
+              type="radio"
+              id="center"
+              name="imagePosition"
+              value="center"
+            />
+          </div>
+          <div class="radioContainer">
+            <label for="bottom">Bottom</label>
+            <input
+              type="radio"
+              id="bottom"
+              name="imagePosition"
+              value="bottom"
+            />
+          </div>
+        </div>
+      </div>
       <button id="hideShowFontNav" title="Toggle Nav">
         <img id="hideShowArrow" src="images/upArrow.svg" alt="Hide Nav" />
       </button>
-    </div>
-
-    <div class="backgroundUpload">
-      <label for="backgroundColorPick">Background Color</label>
-      <input type="color" id="backgroundColorPick" />
-      <p>or</p>
-      <label for="imageUpload">Upload Image</label>
-      <input id="imageUpload" type="file" accept=".jpg, .png, .gif" />
-      <button id="clearImage">Remove Image</button>
-      <h3>Image Position</h3>
-      <div class="backgroundRadioButtons">
-        <div class="radioContainer">
-          <label for="top">Top</label>
-          <input type="radio" id="top" name="imagePosition" value="top" />
-        </div>
-        <div class="radioContainer">
-          <label for="center">Center</label>
-          <input type="radio" id="center" name="imagePosition" value="center" />
-        </div>
-        <div class="radioContainer">
-          <label for="bottom">Bottom</label>
-          <input type="radio" id="bottom" name="imagePosition" value="bottom" />
-        </div>
-      </div>
     </div>
 
     <div class="fontGroup">

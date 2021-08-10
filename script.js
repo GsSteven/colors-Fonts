@@ -96,6 +96,7 @@ $("document").ready(() => {
     $("#hideShowFontNav").click(() => {
         $('.fontHeadContainer').slideToggle();
         $('.fontSubContainer').slideToggle();
+        $('.backgroundUpload').slideToggle();
         $('#hideShowArrow').toggleClass('flip');
     });
 
@@ -111,12 +112,16 @@ $("document").ready(() => {
         const tempURL = URL.createObjectURL(image);
         $(".selectedFonts").css("backgroundImage", `url(${tempURL})`);
         $("#clearImage").css("display", "block");
+        $(".radioContainer").css("display", "flex");
+        $("#imagePositionHead").css("display", "block");
     });
 
     //handle clearing background image
     $("#clearImage").click(function () {
         $(".selectedFonts").css("backgroundImage", ``);
         $(this).css("display", "none");
+        $('.radioContainer').css("display", "none");
+        $('#imagePositionHead').css("display", "none");
     });
 
     //handle background image position change

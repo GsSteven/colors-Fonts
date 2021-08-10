@@ -105,9 +105,12 @@ h2 {
     position: sticky;
     top: 0;
     background-color: white;
+    max-width: 350px;
+    margin: 0 auto;
 }
 
-.fontNav div {
+.fontNav .fontHeadContainer,
+.fontNav .fontSubContainer {
     display: flex;
     flex-direction: column;
     margin: 0 10px;
@@ -148,6 +151,7 @@ h2 {
 
 .backgroundUpload {
     text-align: center;
+    margin-top: 10px;
 }
 
 .backgroundUpload #backgroundColorPick {
@@ -180,18 +184,20 @@ h2 {
 .backgroundUpload h3 {
     text-align: center;
     margin-top: 10px;
+    display: none;
 }
 
 .backgroundRadioButtons {
     width: 300px;
     margin: 0 auto;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
 .radioContainer {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
