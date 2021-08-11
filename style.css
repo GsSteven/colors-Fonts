@@ -94,6 +94,7 @@ h2 {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    color: black;
 }
 
 .fontNav {
@@ -224,6 +225,7 @@ h2 {
 
 .selectedFonts {
     padding-bottom: 30px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
